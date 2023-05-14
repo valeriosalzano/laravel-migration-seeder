@@ -31,9 +31,9 @@
                             <td>{{$train->company}}</td>
                             <td>{{$train->wagons_number}}</td>
                             <td>{{$train->departure_station}}</td>
-                            <td>{{$train->departure_date}}</td>
+                            <td>{{ substr($train->departure_date, -8, 5)}}</td>
                             <td>{{$train->arrival_station}}</td>
-                            <td>{{$train->arrival_date}}</td>
+                            <td>{{substr($train->arrival_date, -8, 5)}}</td>
                             <td>
                                 @if ($train->on_time)
                                     @if ( $train->arrival_date < strlen(date(now())))
