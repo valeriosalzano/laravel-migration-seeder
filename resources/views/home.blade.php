@@ -27,12 +27,12 @@
                 <tbody>
                     @foreach ($trains as $train)
                         <tr>
-                            <th scope="row">{{$train->code}}</th>
-                            <td>{{$train->company}}</td>
+                            <th scope="row">{{$train->train_code}}</th>
+                            <td class="text-capitalize">{{$train->company}}</td>
                             <td>{{$train->wagons_number}}</td>
-                            <td>{{$train->departure_station}}</td>
+                            <td class="text-capitalize">{{$train->departure_station}}</td>
                             <td>{{ substr($train->departure_date, -8, 5)}}</td>
-                            <td>{{$train->arrival_station}}</td>
+                            <td class="text-capitalize">{{$train->arrival_station}}</td>
                             <td>{{substr($train->arrival_date, -8, 5)}}</td>
                             <td>
                                 @if ($train->on_time)
